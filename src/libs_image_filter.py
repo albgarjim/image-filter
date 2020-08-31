@@ -22,7 +22,6 @@ def filter_pixel(_path):
                     data[L][M] = color
 
     Image.fromarray(data).save("filtered-tiger", "JPEG")
-    return Image.fromarray(data).resize((600, 600))
 
 
 def average_color(_data, _y, _x, s):
