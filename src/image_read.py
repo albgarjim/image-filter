@@ -7,10 +7,9 @@ root = Tk()
 canvas = Canvas(root, width=600, height=600)
 canvas.pack()
 
-my_image = Image.open("./images/elephant.jpg")
 
-filter_ascii(my_image, 1200, 1200)
-# pixelated = filter_pixel("./images/elephant.jpg")
+# pixelated = filter_pixel("../tools/images/tiger.jpg")
+filter_ascii("../tools/images/elephant.jpg", 1200, 1200)
 
 
 # img = ImageTk.PhotoImage(pixelated)

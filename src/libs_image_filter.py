@@ -5,27 +5,24 @@ from libs_image_filter import *
 import os
 
 
-def filter_pixel(_image, _y, _x):
-    copy_image = _image.copy()
-    copy_image = copy_image.resize((_y, _x))
-
-    data = np.asarray(copy_image)
-    data.setflags(write=1)
+def filter_pixel(_path):
+    data = np.asarray(Image.open(_path)).copy()
     print(type(data))
     print(data.shape)
     print(data[0][0][0])
 
-    step = 10
+    step = 30
 
-    for I in range(0, int(600/step)):
-        for K in range(0, int(600/step)):
+    for I in range(0, int(len(data)/step)):
+        for K in range(0, int(len(data[0])/step)):
             color = average_color(data, I*step, K*step, step)
 
             for L in range(I * step, I * step + step):
                 for M in range(K * step, K * step + step):
                     data[L][M] = color
 
-    return Image.fromarray(data)
+    Image.fromarray(data).save("filtered-tiger", "JPEG")
+    return Image.fromarray(data).resize((600, 600))
 
 
 def average_color(_data, _y, _x, s):
@@ -56,12 +53,8 @@ def average_grayscale(_data, _y, _x, s):
     return color
 
 
-def filter_ascii(_image, _y, _x):
-    copy_image = _image.copy()
-    copy_image = copy_image.resize((_y, _x)).convert('LA')
-
-    data = np.asarray(copy_image)
-    data.setflags(write=1)
+def filter_ascii(_path, _y, _x):
+    data = np.asarray(Image.open(_path).resize((_y, _x)).convert('LA')).copy()
     print(type(data))
     print(data.shape)
     print(data[0][0][0])
@@ -82,32 +75,12 @@ def filter_ascii(_image, _y, _x):
                 "'", ",", ".",
                 "_", " ", " "
             ]
-
-            # os.remove('./ascii.txt')
-            # f.close()
-
             with open("./ascii.txt", 'a') as f:
-                print(chr_l[int(color[0]/13)] + " ", end='')
-                f.write(chr_l[int(color[0]/13)] + " ")
+                print(chr_l[int(color[0]/13)] + "  ", end='')
+                f.write(chr_l[int(color[0]/13)] + "  ")
                 line_count += 1
-
-                # if color[0] >= 200:
-                #     print(".", end='')
-                #     line_count += 1
-                # elif color[0] >= 100:
-                #     print("-", end='')
-                #     line_count += 1
-                # else:
-                #     print("*", end='')
-                #     line_count += 1
 
                 if(line_count == int(_x/10)):
                     print()
                     f.write("\n")
                     line_count = 0
-            # for L in range(I * step, I * step + step):
-            #     for M in range(K * step, K * step + step):
-
-            #         data[L][M] = color
-
-    # return Image.fromarray(data)
