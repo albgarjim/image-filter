@@ -1,4 +1,4 @@
-# Project title
+# Image Filter pixel and ascii art
 
 
 [//]: # "References"
