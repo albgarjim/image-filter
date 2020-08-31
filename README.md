@@ -3,7 +3,11 @@
 
 [//]: # "References"
 [contact-alberto]: albgarjim1@gmail.com
-
+[unsplash-link]: https://unsplash.com/
+[image-elephant]: ./docs/images/elephant.png
+[image-tiger]: ./docs/images/tiger.jpg
+[image-filter-elephant]: ./docs/images/filter-elephant.png
+[image-filter-tiger]: ./docs/images/filter-tiger.jpeg
 
 <!-- description of what the project does  -->
 Service to apply filters to images
@@ -20,17 +24,23 @@ Service to apply filters to images
 
 ## Introduction
 
-This project contains filters to pixelate images and convert them to ascii art
+This project contains filters to pixelate images and convert them to ascii art. The sample images used are obtained from [Unsplash][unsplash-link]
 
 
 ## Results
 
 Showcase of the pixel filter:
 
+Original         |    Filtered
+:-------------------------:|:-------------------------:
+![image tiger][image-tiger]  |  ![image tiger][image-filter-tiger]
 
 
 Showcase of the ascii filter:
 
+Original         |    Filtered
+:-------------------------:|:-------------------------:
+![image elephant][image-elephant]  |  ![image elephant][image-filter-elephant]
 
 ## Installation
 

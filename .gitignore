@@ -32,5 +32,3 @@ routes.txt
 
 # Ignore all folders taht start with a dot
 .*/
-
-images/
