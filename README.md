@@ -57,18 +57,16 @@ cd ./src/image-filter
 ```
 
 ## Usage
-<!-- how to use the project, add code fragments if needed -->
 
-## Documentation
+The 2 main functions are `filter_pixelated` and `filter_ascii` called from the `image_read` file and implemented on `libs_image_filter.py`.
 
+- filter_pixelated receives a path to the image to apply the filter
+
+- filter_ascii receives a path to the image aswell as 2 parameters for the scaling of the resulting image
 
 ## License
 
 Released under MIT License
-
-## TODO
-- dependencies for python packages used
-- usage sample code
 
 
 ## Contact
