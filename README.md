@@ -2,11 +2,11 @@
 
 
 [//]: # "References"
-[contact-albert]: albgarjim1@gmail.com
+[contact-alberto]: albgarjim1@gmail.com
 
 
 <!-- description of what the project does  -->
-Service to fetch, save and preprocess products from partner shop APIs.
+Service to apply filters to images
 
 ## Table of Contents
 
@@ -20,16 +20,31 @@ Service to fetch, save and preprocess products from partner shop APIs.
 
 ## Introduction
 
+This project contains filters to pixelate images and convert them to ascii art
+
 
 ## Results
 
-<!-- results of what the project does, add images and gifs -->
+Showcase of the pixel filter:
+
+
+
+Showcase of the ascii filter:
+
 
 ## Installation
 
+Clone this repository with the command:
 
-<!-- name technologies used and how to build project -->
+```sh
+git clone https://github.com/albgarjim/image-filter.git
+```
 
+Navigate into the src file insidie the `image-filter` folder:
+
+```sh
+cd ./src/image-filter
+```
 
 ## Usage
 <!-- how to use the project, add code fragments if needed -->
@@ -39,9 +54,11 @@ Service to fetch, save and preprocess products from partner shop APIs.
 
 ## License
 
-Released under GPL V2
+Released under MIT License
 
 ## TODO
+- dependencies for python packages used
+- usage sample code
 
 
 ## Contact
